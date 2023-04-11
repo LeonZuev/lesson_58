@@ -3,7 +3,7 @@ public class Main {
   public static void main(String[] args) {
 //    printBin(19);
 //    System.out.println("sumDig(1234) = " + sumDig(1234));
-//    System.out.println(gcd(10, 15));
+//    System.out.println(gcd(13, 17));
     System.out.println(fact(3));
   }
 
@@ -74,15 +74,31 @@ public class Main {
   //   вывод '<- N=', N, нс
   //   // возврат знач
   // кон
+//  public static int fact(int n) {
+//    int result;
+//    System.out.println("-> N = " + n);
+//    if (n <= 1) {
+//      result = 1;
+//    } else {
+//      result = n * fact(n - 1);
+//    }
+//    System.out.println("<- N = " + n);
+//    return result;
+//  }
+  // time: O(n), space: O(n)
   public static int fact(int n) {
-    int result;
-    System.out.println("-> N = " + n);
     if (n <= 1) {
-      result = 1;
-    } else {
-      result = n * fact(n - 1);
+      return 1;
     }
-    System.out.println("<- N = " + n);
+    return n * fact(n - 1);
+  }
+
+  // time: O(n), space: O(1)
+  public static int factLinear(int n) {
+    int result = 1;
+    for (int k = 2; k <= n; ++k) {
+      result *= k; // домножаем на все числа от 2 до n
+    }
     return result;
   }
 }
