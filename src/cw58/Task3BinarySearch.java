@@ -1,3 +1,5 @@
+package cw58;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +12,6 @@ public class Task3BinarySearch {
     int number = guess(1, 1000);
     System.out.println("Вы загадали число " + number + "!");
   }
-
   public static int guess(int left, int right) throws IOException {
     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 

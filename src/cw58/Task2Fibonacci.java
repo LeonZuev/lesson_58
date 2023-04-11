@@ -1,3 +1,5 @@
+package cw58;
+
 public class Task2Fibonacci {
 
   public static void main(String[] args) {
