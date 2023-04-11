@@ -63,6 +63,17 @@ public class Main {
     return gcd(a, b - a); // вместо бОльшего - b - подставили (b - a)
   }
 
+  public static int gcdLinear(int a, int b) {
+    while (a != b) {
+      if (a > b) {
+        a = a - b;
+      } else {
+        b = b - a;
+      }
+    }
+    return a; // можно вернуть любое - числа равны
+  }
+
   // алг цел Fact(цел N)
   // нач
   //   вывод '-> N=', N, нс
@@ -97,7 +108,7 @@ public class Main {
   public static int factLinear(int n) {
     int result = 1;
     for (int k = 2; k <= n; ++k) {
-      result *= k; // домножаем на все числа от 2 до n
+      result *= k; // помножаем на все числа от 2 до n
     }
     return result;
   }
