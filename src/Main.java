@@ -3,7 +3,8 @@ public class Main {
   public static void main(String[] args) {
 //    printBin(19);
 //    System.out.println("sumDig(1234) = " + sumDig(1234));
-    System.out.println(gcd(10, 15));
+//    System.out.println(gcd(10, 15));
+    System.out.println(fact(3));
   }
 
   // алг printBin(цел n):
@@ -48,13 +49,40 @@ public class Main {
   //   все
   //   // возврат знач
   // кон
+  // алгоритм Евклида
   public static int gcd(int a, int b) {
-    if (a == 0 || b == 0) {
-      return a + b; // "одно" из них 0, в сумме получится "второе"
+//    if (a == 0 || b == 0) {
+//      return a + b; // "одно" из них 0, в сумме получится "второе"
+//    }
+    if (a == b) { // закончим на один шаг раньше - уменьшаем большее, пока числа не станут равны
+      return a; // возвращаем любое из чисел - они равны
     }
     if (a > b) {
       return gcd(a - b, b); // вместо бОльшего - a - подставили (a - b)
     }
     return gcd(a, b - a); // вместо бОльшего - b - подставили (b - a)
+  }
+
+  // алг цел Fact(цел N)
+  // нач
+  //   вывод '-> N=', N, нс
+  //   если N <= 1 то
+  //     знач:= 1
+  //   иначе
+  //     знач:= N * Fact(N-1)
+  //   все
+  //   вывод '<- N=', N, нс
+  //   // возврат знач
+  // кон
+  public static int fact(int n) {
+    int result;
+    System.out.println("-> N = " + n);
+    if (n <= 1) {
+      result = 1;
+    } else {
+      result = n * fact(n - 1);
+    }
+    System.out.println("<- N = " + n);
+    return result;
   }
 }
