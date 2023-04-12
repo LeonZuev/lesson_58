@@ -1,3 +1,5 @@
+package hw58;
+
 import java.util.ArrayList;
 
 public class Homework58Task1IndexOf {
