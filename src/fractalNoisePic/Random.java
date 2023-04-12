@@ -12,8 +12,6 @@ public class Random {
     this.lineWidth = lineWidth;
   }
   public  int getRandomValue(int x, int y) {
-   /* return table[(x + y * lineWidth)];*/
-    return table[Math.abs((x + y * lineWidth) % table.length)];
-    /*return table[((x + y * lineWidth) % table.length + table.length) % table.length];*/
+    return table[(x + y * lineWidth) % table.length];
   }
 }
