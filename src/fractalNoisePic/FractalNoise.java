@@ -28,8 +28,4 @@ public class FractalNoise {
     }
     return sum;
   }
-
-
-
-
 }

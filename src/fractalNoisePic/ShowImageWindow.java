@@ -22,5 +22,4 @@ public class ShowImageWindow {
 frame.setVisible(true);
 
   }
-
 }

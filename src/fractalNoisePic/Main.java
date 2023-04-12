@@ -18,14 +18,12 @@ public class Main {
 
     int[] pixels = ((DataBufferInt)image.getRaster().getDataBuffer()).getData();
     int pixelIndex = 0;
-    for (int i = 0; i < image.getHeight(); i++) {
-      for (int j = 0; j < image.getWidth(); j++) {
+    for (int i = 0; i < image.getHeight(); ++i) {
+      for (int j = 0; j < image.getWidth(); ++j) {
         int value = 0xff & (int)(fractalNoise.getValue(j, i) * 255);
-        pixels[pixelIndex++] = 0xff000000 | value << 16 | value << 18;
+        pixels[pixelIndex++] = 0xff000000 | value << 16 | value << 8 | value;
       }
     }
     showImageWindow(image, IMAGE_WIDTH, IMAGE_HEIGHT);
-
-
   }
 }
