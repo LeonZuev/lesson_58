@@ -18,8 +18,7 @@ public class TerrainRenderer {
     );
 
     int[] noisePixels = ((DataBufferInt) noiseImage.getRaster().getDataBuffer()).getData();
-    BufferedImage terrainImage = null;
-    int[] terrainPixels = ((DataBufferInt) terrainImage.getRaster().getDataBuffer()).getData();
+    int[] terrainPixels = ((DataBufferInt) terrianImage.getRaster().getDataBuffer()).getData();
 
     for (int i = 0; i < noisePixels.length; ++i) {
       float height = (noisePixels[i] & 0xFF) / 255.0f;
