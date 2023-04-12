@@ -1,4 +1,4 @@
-package hw58;
+package fractalNoisePic;
 
 public class Random {
   int[] table;

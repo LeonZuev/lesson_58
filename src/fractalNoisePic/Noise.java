@@ -1,4 +1,4 @@
-package hw58;
+package fractalNoisePic;
 // билинейная интерполяция
 public class Noise {
 
